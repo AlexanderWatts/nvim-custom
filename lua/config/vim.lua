@@ -24,3 +24,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.opt.clipboard:append("unnamedplus")
 
+-- Search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
