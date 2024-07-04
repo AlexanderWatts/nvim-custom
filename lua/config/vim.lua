@@ -25,5 +25,12 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.opt.clipboard:append("unnamedplus")
 
 -- Search
+vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.opt.signcolumn = "yes"
+vim.opt.backup = false
+vim.opt.undofile = true
+vim.opt.termguicolors = true
+vim.opt.writebackup = false
