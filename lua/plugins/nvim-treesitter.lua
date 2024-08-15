@@ -6,12 +6,19 @@ return {
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
+				"lua",
+				"vimdoc",
+				"vim",
 				"java",
 				"rust",
-				"lua",
+				"c",
+				"markdown",
+				"markdown_inline",
+				"typescript",
+				"javascript",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
-	end
+	end,
 }

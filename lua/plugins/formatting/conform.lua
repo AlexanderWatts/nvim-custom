@@ -1,17 +1,31 @@
 -- https://github.com/stevearc/conform.nvim
 
 return {
-	'stevearc/conform.nvim',
+	"stevearc/conform.nvim",
+	event = {
+		"BufReadPre",
+		"BufNewFile",
+	},
 	opts = {},
 	config = function()
 		require("conform").setup({
-			format_on_save = {
-				timeout_ms = 500,
-				lsp_format = "fallback",
-			},
 			formatters_by_ft = {
 				lua = { "stylua" },
 			},
+			format_on_save = {
+				enabled = true,
+				timeout_ms = 500,
+				-- lsp_format = "fallback",
+				async = false,
+			},
 		})
-	end
+
+		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+			require("conform").format({
+				timeout_ms = 500,
+				lsp_format = "fallback",
+				async = false,
+			})
+		end)
+	end,
 }
