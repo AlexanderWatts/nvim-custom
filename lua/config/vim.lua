@@ -6,6 +6,8 @@ vim.keymap.set("n", "gd", function()
 	vim.lsp.buf.definition()
 end)
 
+vim.diagnostic.open_float()
+
 vim.api.nvim_set_keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", {
 	silent = true,
 	noremap = true,

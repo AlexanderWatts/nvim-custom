@@ -9,7 +9,7 @@ return {
 				"clangd",
 				"rust_analyzer",
 				"html",
-				"tsserver",
+				"ts_ls",
 			},
 		})
 	end,
