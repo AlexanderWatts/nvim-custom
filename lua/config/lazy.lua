@@ -16,6 +16,9 @@ require("lazy").setup({
 		{ import = "plugins.lsps" },
 		{ import = "plugins" },
 	},
-	install = { colorscheme = { "habamax" } },
+	change_detection = { notify = false },
 	checker = { enabled = true },
+	ui = {
+		border = "rounded", -- Other options: "single", "double", "shadow", etc.
+	},
 })
