@@ -2,12 +2,18 @@
 
 return {
 	"hrsh7th/nvim-cmp",
+	event = "InsertEnter",
 	config = function()
 		local cmp = require 'cmp'
 
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
+			matching = {
+				disallow_fuzzy_matching = true,   -- Disable fuzzy matching
+				disallow_partial_matching = true, -- Disable partial matching
+				disallow_prefix_unmatching = true -- Disable non-prefix matching
+			},
 			snippet = {
 				expand = function(args)
 					require('luasnip').lsp_expand(args.body)

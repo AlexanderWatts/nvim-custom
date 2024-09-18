@@ -6,8 +6,6 @@ vim.keymap.set("n", "gd", function()
 	vim.lsp.buf.definition()
 end)
 
-vim.diagnostic.open_float()
-
 vim.api.nvim_set_keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", {
 	silent = true,
 	noremap = true,
@@ -30,6 +28,31 @@ vim.opt.scrolloff = 20
 -- Lines
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- Better diagnostics
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '',
+    spacing = 0,
+  },
+  signs = false,
+  float = {
+    show_header = true,
+    border = 'rounded',
+    source = 'always',
+    focusable = true,
+    style = 'normal',
+  },
+  underline = true,
+  update_in_insert = false,
+  severity_sort = false,
+})
+vim.keymap.set("n", "<leader>e", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>");
+
+-- Documentation border
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = 'rounded',
+})
 
 -- Visual mode movements (thanks primeagen)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
