@@ -25,6 +25,10 @@ return {
 			capabilities = capabilities,
 		})
 
+		lspconfig.gopls.setup({
+			capabilities = capabilities,
+		})
+
 		lspconfig.clangd.setup({
 			capabilities = capabilities,
 		})

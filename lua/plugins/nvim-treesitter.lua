@@ -16,6 +16,7 @@ return {
 				"markdown_inline",
 				"typescript",
 				"javascript",
+				"go",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },

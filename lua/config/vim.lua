@@ -2,6 +2,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.opt.cursorline = true
+
 vim.keymap.set("n", "gd", function()
 	vim.lsp.buf.definition()
 end)

@@ -10,6 +10,7 @@ return {
 				"rust_analyzer",
 				"html",
 				"ts_ls",
+				"gopls",
 			},
 		})
 	end,
