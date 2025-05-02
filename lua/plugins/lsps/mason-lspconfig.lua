@@ -12,6 +12,7 @@ return {
 				"ts_ls",
 				"gopls",
 				"tailwindcss",
+				"apex_ls"
 			},
 		})
 	end,
