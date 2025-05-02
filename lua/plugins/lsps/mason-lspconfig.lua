@@ -11,6 +11,7 @@ return {
 				"html",
 				"ts_ls",
 				"gopls",
+				"tailwindcss",
 			},
 		})
 	end,

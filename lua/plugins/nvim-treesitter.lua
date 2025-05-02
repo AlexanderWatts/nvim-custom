@@ -18,7 +18,9 @@ return {
 				"javascript",
 				"go",
 			},
-			highlight = { enable = true },
+			highlight = {
+				enable = true,
+			},
 			indent = { enable = true },
 		})
 	end,
