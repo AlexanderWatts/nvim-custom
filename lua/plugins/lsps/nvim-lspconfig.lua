@@ -25,10 +25,6 @@ return {
 			capabilities = capabilities,
 		})
 
-		lspconfig.apex_ls.setup({
-			capabilities = capabilities,
-		})
-
 		lspconfig.html.setup({
 			capabilities = capabilities,
 		})
