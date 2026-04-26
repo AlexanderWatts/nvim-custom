@@ -33,11 +33,8 @@ vim.opt.relativenumber = true
 
 -- Better diagnostics
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = '',
-    spacing = 0,
-  },
-  signs = false,
+	virtual_text = false,
+  signs = true,
   float = {
     show_header = true,
     border = 'rounded',
@@ -47,7 +44,7 @@ vim.diagnostic.config({
   },
   underline = true,
   update_in_insert = false,
-  severity_sort = false,
+  severity_sort = true,
 })
 vim.keymap.set("n", "<leader>e", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>");
 
